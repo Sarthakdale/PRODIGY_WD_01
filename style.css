@@ -1,0 +1,154 @@
+/* --- RESET & FONTS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* --- NAVBAR STYLING --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    transition: 0.5s ease;
+    z-index: 1000;
+    background: transparent; /* Initially transparent */
+}
+
+/* Creative Logo */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.dot { color: #00bcd4; font-size: 30px; }
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li { margin: 0 20px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* CREATIVE HOVER EFFECT: Underline expands from center */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00bcd4;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { color: #00bcd4; }
+
+/* --- SCROLLED STATE (Glassmorphism) --- */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent */
+    backdrop-filter: blur(10px); /* The "Frosted Glass" effect */
+    padding: 15px 50px; /* Navbar shrinks */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- MOBILE HAMBURGER MENU --- */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?technology,code');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+
+.cta-button {
+    padding: 12px 30px;
+    background: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.cta-button:hover { background: #fff; color: #00bcd4; }
+
+/* --- SECTIONS --- */
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+    height: 80vh;
+}
+.alt-bg { background-color: #e9ecef; }
+
+/* --- MEDIA QUERIES (Mobile Responsiveness) --- */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #252525;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%); /* Hidden by default */
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li { opacity: 0; margin: 30px 0; }
+    .burger { display: block; }
+}
+
+/* Class to show menu on mobile */
+.nav-active { transform: translateX(0%); }
+
+/* Animations for links appearing */
+@keyframes navLinkFade {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
