@@ -3,51 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prodigy Task 01 - Creative Landing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Prodigy InfoTech | Innovative Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar" id="navbar">
-        <div class="logo">Prodigy<span class="dot">.</span></div>
-        
-        <ul class="nav-links" id="nav-links">
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-lightbulb"></i> PRODIGY <span>INFOTECH</span>
+        </div>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact" class="btn-contact">Contact Us</a></li>
         </ul>
-
-        <div class="burger" id="burger">
+        <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
+    <header id="home" class="hero">
         <div class="hero-content">
-            <h1>Creative Solutions</h1>
-            <p>Innovating the future of Web Development with Prodigy InfoTech.</p>
-            <a href="#services" class="cta-button">Explore More</a>
+            <span class="badge">Welcome to Future Tech</span>
+            <h1>Creating Digital <br> <span class="highlight">Excellence</span></h1>
+            <p>We provide world-class software development services and immersive internship programs to nurture the next generation of tech leaders.</p>
+            <div class="cta-group">
+                <a href="#services" class="btn primary-btn">Our Services</a>
+                <a href="#careers" class="btn secondary-btn">Join Internship</a>
+            </div>
+        </div>
+        <div class="hero-image">
+             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team Working">
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-img">
+                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Office Building">
+                </div>
+                <div class="col-text">
+                    <h2>About Prodigy InfoTech</h2>
+                    <p>Prodigy InfoTech is a leading software development company dedicated to delivering innovative solutions for businesses worldwide. We specialize in turning complex challenges into seamless digital experiences.</p>
+                    <p>Beyond development, we are committed to education. Our renowned <strong>Internship Program</strong> provides hands-on experience in Web Development, Data Science, and Mobile Apps, bridging the gap between academic learning and industry demands.</p>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <h3>500+</h3>
+                            <p>Projects Done</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>10k+</h3>
+                            <p>Interns Trained</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="content-section">
-        <h2>About Us</h2>
-        <p>We craft digital experiences that matter.</p>
+    <section id="services" class="section bg-light">
+        <div class="container center-text">
+            <h2>Our Expertise</h2>
+            <p class="subtitle">Cutting-edge solutions tailored to your business needs.</p>
+            
+            <div class="services-grid">
+                <div class="card">
+                    <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Responsive, high-performance websites built using React, Angular, and modern CSS frameworks.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>App Development</h3>
+                    <p>Native and cross-platform mobile applications that provide seamless user experiences on iOS and Android.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box"><i class="fas fa-database"></i></div>
+                    <h3>Data Science</h3>
+                    <p>Unlocking the power of data through advanced analytics, machine learning, and AI-driven insights.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="services" class="content-section alt-bg">
-        <h2>Our Services</h2>
-        <p>Web Design | UI/UX | Mobile Apps</p>
-    </section>
-
-    <section id="contact" class="content-section">
-        <h2>Get in Touch</h2>
-        <p>Let's build something amazing together.</p>
-    </section>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Prodigy InfoTech</h2>
+                <p>Innovating for a better tomorrow.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> contact@prodigyinfotech.dev</p>
+                <p><i class="fas fa-globe"></i> prodigyinfotech.dev</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mumbai, India (MSME Registered)</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Prodigy InfoTech. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
